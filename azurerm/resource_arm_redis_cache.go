@@ -642,7 +642,7 @@ func flattenRedisPatchSchedules(schedule redis.PatchSchedule) []interface{} {
 	outputs := make([]interface{}, 0)
 
 	for _, entry := range *schedule.ScheduleEntries.ScheduleEntries {
-		output := make(map[string]interface{}, 0)
+		output := make(map[string]interface{})
 
 		output["day_of_week"] = string(entry.DayOfWeek)
 		output["start_hour_utc"] = int(*entry.StartHourUtc)

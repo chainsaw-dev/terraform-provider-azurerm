@@ -327,7 +327,7 @@ func flattenEventHubCaptureDescription(description *eventhub.CaptureDescription)
 	results := make([]interface{}, 0)
 
 	if description != nil {
-		output := make(map[string]interface{}, 0)
+		output := make(map[string]interface{})
 
 		if enabled := description.Enabled; enabled != nil {
 			output["enabled"] = *enabled
@@ -344,7 +344,7 @@ func flattenEventHubCaptureDescription(description *eventhub.CaptureDescription)
 		}
 
 		if destination := description.Destination; destination != nil {
-			destinationOutput := make(map[string]interface{}, 0)
+			destinationOutput := make(map[string]interface{})
 
 			if name := destination.Name; name != nil {
 				destinationOutput["name"] = *name

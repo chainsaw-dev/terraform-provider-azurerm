@@ -300,7 +300,7 @@ func expandAppServicePlanProperties(d *schema.ResourceData) *web.AppServicePlanP
 
 func flattenAppServiceProperties(props *web.AppServicePlanProperties) []interface{} {
 	result := make([]interface{}, 0, 1)
-	properties := make(map[string]interface{}, 0)
+	properties := make(map[string]interface{})
 
 	if props.HostingEnvironmentProfile != nil && props.HostingEnvironmentProfile.ID != nil {
 		properties["app_service_environment_id"] = *props.HostingEnvironmentProfile.ID

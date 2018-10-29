@@ -2,15 +2,16 @@
   "Deadline": "10m",
   "Enable": [
     "errcheck",
-    "unconvert",
     "gofmt",
     "goimports",
     "gotype",
     "ineffassign",
     "interfacer",
+    "megacheck",
     "misspell",
     "structcheck",
     "unparam",
+    "unconvert",
     "unused",
     "varcheck",
     "vet"

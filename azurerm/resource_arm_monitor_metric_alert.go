@@ -428,7 +428,7 @@ func flattenMonitorMetricAlertAction(input *[]insights.MetricAlertAction) (resul
 		return
 	}
 	for _, action := range *input {
-		v := make(map[string]interface{}, 0)
+		v := make(map[string]interface{})
 
 		if action.ActionGroupID != nil {
 			v["action_group_id"] = *action.ActionGroupID

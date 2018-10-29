@@ -16,14 +16,8 @@ func parseKeyVaultChildID(id string) (*KeyVaultChildID, error) {
 
 	path := idURL.Path
 
-	path = strings.TrimSpace(path)
-	if strings.HasPrefix(path, "/") {
-		path = path[1:]
-	}
-
-	if strings.HasSuffix(path, "/") {
-		path = path[:len(path)-1]
-	}
+	path = strings.TrimPrefix(path, "/")
+	path = strings.TrimSuffix(path, "/")
 
 	components := strings.Split(path, "/")
 
